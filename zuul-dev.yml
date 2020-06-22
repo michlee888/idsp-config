@@ -46,4 +46,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream,refresh
+        include: bus-refresh
