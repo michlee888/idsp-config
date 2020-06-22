@@ -4,14 +4,19 @@ spring:
   cloud:
     config:
       override-none: true
+  rabbitmq:
+    host: 176.114.13.198
+    port: 5672
+    username: admin
+    password: admin
 
 server:
   port: 8001
-
+  
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
 
 management:
   endpoints:

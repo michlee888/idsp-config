@@ -1,24 +1,12 @@
-spring:
-  application:
-    name: order-service
-  cloud:
-    config:
-      override-none: true
-
-server:
-  port: 8201
-
+spring:  application:    name: order-service  cloud:    config:      override-none: true  rabbitmq:    host: 176.114.13.198    port: 5672    username: admin    password: adminserver:  port: 8201
+    
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
-
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      
 feign:
   hystrix:
     enabled: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream,refresh
+    
+management:  endpoints:    web:      exposure:        include: hystrix.stream,refresh        
